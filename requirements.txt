@@ -1,0 +1,4 @@
+svg.path==2.2
+numpy==1.13.0
+lxml==3.8.0
+Pillow==4.2.0
