@@ -1,15 +1,5 @@
 from svg.path import Path, Line, QuadraticBezier
-from util import load_svg, write_svg, to_tuple, to_cnum
-
-
-def intersection(p1, p2, p3, p4):
-    (x1, y1), (x2, y2) = p1, p2
-    (x3, y3), (x4, y4) = p3, p4
-    a1 = (y2 - y1) / (x2 - x1)
-    a3 = (y4 - y3) / (x4 - x3)
-    x = (a1 * x1 - y1 - a3 * x3 + y3) / (a1 - a3)
-    y = (y2 - y1) / (x2 - x1) * (x - x1) + y1
-    return (x, y)
+from util import load_svg, write_svg, to_tuple, to_cnum, intersection
 
 
 if __name__ == '__main__':

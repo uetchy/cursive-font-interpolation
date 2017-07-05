@@ -1,7 +1,7 @@
 import numpy as np
 from PIL import Image
 from PIL import ImageDraw
-from util import load_svg, to_tuple
+from util import load_svg, to_tuple, to_plain_path
 
 
 # https://stackoverflow.com/a/2292690
@@ -41,19 +41,6 @@ def pascal_row(n):
     else:
         result.extend(reversed(result))
     return result
-
-
-def to_plain_path(complex_path):
-    arr = []
-    for point in complex_path:
-        point_class = point.__class__.__name__
-        if point_class == 'CubicBezier':
-            arr.append(
-                list(map(to_tuple, [point.start, point.control1, point.control2, point.end])))
-        elif point_class == 'Line':
-            arr.append(
-                list(map(to_tuple, [point.start, point.start, point.end, point.end])))
-    return arr
 
 
 if __name__ == '__main__':
