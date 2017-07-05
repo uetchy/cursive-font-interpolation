@@ -33,4 +33,4 @@ if __name__ == '__main__':
 
     data.append(path)
 
-    write_svg('./intersection.svg', data)
+    write_svg('./crossed_interpolation.svg', data)

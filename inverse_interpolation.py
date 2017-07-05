@@ -119,4 +119,4 @@ if __name__ == '__main__':
         points.extend(bezier(ts))
     draw.polygon(points, fill='red')
 
-    im.save('naive_inversion.png')
+    im.save('inverse_interpolation.png')
