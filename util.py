@@ -2,12 +2,11 @@ import numpy as np
 import lxml.etree as ET
 from svg.path import parse_path
 
-
 def load_svg(filename):
     doc = ET.parse(filename)
     root = doc.getroot()
     paths = [parse_path(x.attrib['d'])
-             for x in root.findall('{http://www.w3.org/2000/svg}path')]
+             for x in root.findall('.//{http://www.w3.org/2000/svg}path')]
     return paths
 
 
