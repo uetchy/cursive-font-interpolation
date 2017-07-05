@@ -51,3 +51,9 @@ def intersection(p1, p2, p3, p4):
     x = (a1 * x1 - y1 - a3 * x3 + y3) / (a1 - a3)
     y = (y2 - y1) / (x2 - x1) * (x - x1) + y1
     return (x, y)
+
+
+# returns euclidean distance from p1 to p2
+def distance(p1, p2):
+    p1, p2 = np.array([p1, p2])
+    return np.sqrt(np.sum((p2 - p1)**2))
