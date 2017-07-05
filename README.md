@@ -2,7 +2,7 @@
 
 Simple experiment to interpolate continuous strokes for cursive fonts.
 
-![Comparison graph](https://raw.githubusercontent.com/uetchy/cursive/master/assets/comparison.png)
+![Comparison graph](https://raw.githubusercontent.com/uetchy/cursive/master/assets/comparison2.png)
 
 ## Roadmap
 
