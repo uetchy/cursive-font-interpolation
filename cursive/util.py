@@ -2,6 +2,7 @@ import numpy as np
 import lxml.etree as ET
 from svg.path import parse_path
 
+
 def load_svg(filename):
     doc = ET.parse(filename)
     root = doc.getroot()

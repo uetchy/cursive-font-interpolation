@@ -2,8 +2,8 @@ from svg.path import Path, Line, QuadraticBezier
 from util import load_svg, write_svg, to_tuple, to_cnum, intersection
 
 
-if __name__ == '__main__':
-    data = load_svg('./train.svg')
+def cross_interpolate(filename, output='./crossed_interpolation.svg'):
+    data = load_svg(filename)
 
     obj1 = data[0]
     obj2 = data[1]
@@ -29,8 +29,11 @@ if __name__ == '__main__':
         Line(b_curve1.start, b_curve2.end),
         j_curve
     )
-    print(path)
 
     data.append(path)
 
-    write_svg('./crossed_interpolation.svg', data)
+    write_svg(output, data)
+
+
+if __name__ == '__main__':
+    cross_interpolate('../datasets/train.svg')
